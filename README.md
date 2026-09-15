@@ -61,7 +61,9 @@ to one of your two student-written examples.
 
 **Response:**
 
-[Write 3–5 sentences.]
+Comparing rows 12 and 13, there are differences in how the tokenizers classified subwords and the capitalization of nouns. DistilBERT uses ## to classify the subword cherish, in which it broke the word down into two distinct parts: cher, ##ish. In contrast, the BART model kept the word together. The  DistilBERT tokenizer also did not recognize I as a noun, nor did it capitalize the first word WOW, whereas the BART tokenizer did so. 
+
+Another difference between the tokenizers can be found in example I5, which included the smiling emoji. The DistilBERT output classified the emoji through this argument [UNK], whereas the BART tokenizer classified the emoji by using the following: ĠðŁĺ, Ĭ. 
 
 ### Q3. Truncation
 
