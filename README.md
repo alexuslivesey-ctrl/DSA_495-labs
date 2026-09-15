@@ -17,14 +17,14 @@ classifier is intended to show.
 
 **Response:**
 
-[Write here.]
+The classification task is to 
 
 ## Files and rerun instructions
 
 List every file included in your submission and briefly describe it.
 
-- `Lab1.ipynb` (or .py): [Complete this description.]
-- `README.md`: this response and reproducibility document.
+- `Lab1.ipynb` (or .py): A Python script to be used in Google Colab for baseline, DistilBERT, and BART zero-shot classification comparisons.
+- `README.md`: This response and reproducibility document.
 - [Add any other submitted files if any, or write “No additional files.”]
 
 To run the analysis:
@@ -49,7 +49,9 @@ class is least common, and why does that make accuracy alone insufficient?
 
 **Response:**
 
-[Write 2–3 sentences.]
+There are 30 development messages and 1970 evaluation messages. Surprise is the least common class in the evaluation messages.
+Accuracy alone is insufficient because it ignores the uneven distribution of the data. 
+Surprise is disproportionately less common than the other classes, which have average counts in the hundreds.
 
 ### Q2. What do the tokenizers receive?
 
