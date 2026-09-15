@@ -42,12 +42,13 @@ code is supplied.
 
 ### Q1. Development and evaluation data
 
-Report the number of development and evaluation messages. Which evaluation
-class is least common, and why does that make accuracy alone insufficient?
+
 
 **Response:**
 
-[Write 2–3 sentences.]
+[There are 30 development messages and 1970 evaluation messages. Surprise is the least common class in the evaluation messages.
+Accuracy related to these evaluation methods is insufficient by itself because it ignores the unevenness in how the data is distributed. 
+Surprise is disproportionately less common in the data than the other classes, which have average counts in the hundreds. ]
 
 ### Q2. What do the tokenizers receive?
 
