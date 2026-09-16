@@ -74,9 +74,12 @@ unless you test that claim.
 
 **Response:**
 
-[Write 2–3 sentences.]
+The content removed from the long diagnostic messages included the following words: 
+way. I described the train ride, the weather, and every stop along the way. I described the train ride, the weather, and every stop along the way. 
+Despite the ordinary journey, I am terrified about what happens tomorrow.
 
-## 2. Specialized encoder classification
+The last sentence of the omitted text reflects emotional content relevant to classifying the message emotion as terrified. By not including that content, the message's emotional content could be classified as neutral or indifferent. 
+
 
 ### Q4. Baseline and encoder results
 
