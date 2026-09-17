@@ -87,14 +87,16 @@ Complete the table using the 1,970-message evaluation set.
 
 | Method | Accuracy | Macro-F1 | Inference seconds |
 |---|---:|---:|---:|
-| Always predict joy | | | N/A |
-| DistilBERT emotion classifier | | | |
+| Always predict joy | 0.350254|0.086466 | N/A |
+| DistilBERT emotion classifier | 0.924365| 0.880256| 5.135587|
 
-Which emotion has the lowest DistilBERT recall? Include its recall and support.
+Which emotion has the lowest DistilBERT recall? Include its recall and support.  
 
 **Response:**
 
-[Write 2–3 sentences.]
+Surprise had the lowest recall (0.7541) on the DistilBERT model across 61 messages.  
+Individual classification ranges of support are between 61 and 690. 
+Recall scores lie between 80 and the low 90s, with the weighted average around 92% recall.
 
 ### Q5. Three encoder errors
 
