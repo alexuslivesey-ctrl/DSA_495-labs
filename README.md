@@ -61,9 +61,14 @@ to one of your two student-written examples.
 
 **Response:**
 
-Comparing rows 12 and 13, there are differences in how the tokenizers classified subwords and the capitalization of nouns. DistilBERT uses ## to classify the subword cherish, in which it broke the word down into two distinct parts: cher, ##ish. In contrast, the BART model kept the word together. The  DistilBERT tokenizer also did not recognize I as a noun, nor did it capitalize the first word WOW, whereas the BART tokenizer did so. 
+Comparing rows 12 and 13, there are differences in how the tokenizers classified subwords and the capitalization of nouns. 
+DistilBERT uses ## to classify the subword cherish, in which it broke the word down into two distinct parts: cher, ##ish. 
+In contrast, the BART model kept the word together. The  DistilBERT tokenizer also did not recognize I as a noun, nor did 
+it capitalize the first word WOW, whereas the BART tokenizer did so. 
 
-Another difference between the tokenizers can be found in example I5, which included the smiling emoji. The DistilBERT output classified the emoji through this argument [UNK], whereas the BART tokenizer classified the emoji by using the following: ĠðŁĺ, Ĭ. 
+Another difference between the tokenizers can be found in example I5, which included the smiling emoji.
+The DistilBERT output classified the emoji through this argument [UNK], whereas the BART tokenizer classified 
+the emoji by using the following: ĠðŁĺ, Ĭ. 
 
 ### Q3. Truncation
 
@@ -78,7 +83,8 @@ The content removed from the long diagnostic messages included the following wor
 way. I described the train ride, the weather, and every stop along the way. I described the train ride, the weather, and every stop along the way. 
 Despite the ordinary journey, I am terrified about what happens tomorrow.
 
-The last sentence of the omitted text reflects emotional content relevant to classifying the message emotion as terrified. By not including that content, the message's emotional content could be classified as neutral or indifferent. 
+The last sentence of the omitted text reflects emotional content relevant to classifying the message emotion as terrified. 
+By not including that content, the message's emotional content could be classified as neutral or indifferent. 
 
 
 ### Q4. Baseline and encoder results
@@ -105,9 +111,9 @@ error if the notebook produces one.
 
 | Example ID | Reference label | Prediction | Model score | Brief observation |
 |---|---|---|---:|---|
-| | | | | |
-| | | | | |
-| | | | | |
+| emotion_test_00468| sadness| joy| 0.995780| |
+| emotion_test_01314| suprise| fear| 0.998750| |
+| emotion_test_00816| anger| joy| 0.9984| |
 
 What pattern, ambiguity, or missing context do you observe? Cite language from
 the messages. Remember that a high model score is not proof that the prediction
@@ -115,7 +121,13 @@ is correct or that the score is calibrated.
 
 **Response:**
 
-[Write 3–5 sentences.]
+The model predictions suggest that broader context is not considered by the model. 
+In the Emotion test 00468 output, the message states, "i cant help feeling this way" and the model predicted joy. 
+Without context, this message could mean excitement about love but can also reflect sadness, which was the true prediction. 
+Language in emotion_test_00816 also shows a similar trend: "whenever i put myself in others shoes and try to make the person happy. 
+The overall pattern observed is that the model does not make predictions based on cognitive empathy that relates the 
+messages to a diverse range of real-world scenarios, and that the messages contain mostly nonemotional words. 
+
 
 ## 3. Zero-shot classification
 
@@ -185,7 +197,13 @@ establish.
 
 ## AI-use statement
 
+I used AI, specifically Claude, to help me with this assignment. I used Claude 
+to ensure I was understanding the existing code. For instance, I use Claude
+to clarify what the code in the second student code block was creating.  
+To ensure that the AI was correct I also looked at past notebooks completed during
+class to compare Claude output to what material I have been taught. 
 State whether you used a generative or agentic AI tool for this assignment.
+During the second student codeblock 
 
 If you used one, briefly identify the tool and explain its role in your work.
 Describe what you completed independently, what assistance you incorporated,
