@@ -62,7 +62,7 @@ to one of your two student-written examples.
 **Response:**
 
 Comparing rows 12 and 13, there are differences in how the tokenizers classified subwords and the capitalization of nouns. 
-DistilBERT uses ## to classify the subword cherish, in which it broke the word down into two distinct parts: cher, ##ish. 
+DistilBERT uses ## to classify the word cherish, in which it broke the word down into two distinct parts (wordpiece): cher, ##ish. 
 In contrast, the BART model kept the word together. The  DistilBERT tokenizer also did not recognize I as a noun, nor did 
 it capitalize the first word WOW, whereas the BART tokenizer did so. 
 
@@ -80,12 +80,12 @@ unless you test that claim.
 **Response:**
 
 The content removed from the long diagnostic messages included the following words: 
-way. I described the train ride, the weather, and every stop along the way. I described the train ride, the weather, and every stop along the way. 
+way. I described the train ride, the weather, and every stop along the way. 
+I described the train ride, the weather, and every stop along the way. 
 Despite the ordinary journey, I am terrified about what happens tomorrow.
 
 The last sentence of the omitted text reflects emotional content relevant to classifying the message emotion as terrified. 
 By not including that content, the message's emotional content could be classified as neutral or indifferent. 
-
 
 ### Q4. Baseline and encoder results
 
@@ -197,24 +197,27 @@ establish.
 
 ## AI-use statement
 
-I used AI, specifically Claude, to help me with this assignment. I used Claude 
-to ensure I was understanding the existing code. For instance, I use Claude
+I used AI, specifically Claude, to help me with this assignment. First, 
+I asked Claude to give me a breakdown of how to use and break down 
+official documentation because I have not used it much before. 
+
+Next, I used Claude to ensure I was understanding the existing code. For instance, I used Claude
 to clarify what the code in the second student code block was creating.  
-To ensure that the AI was correct I also looked at past notebooks completed during
+To ensure that the AI was correct, I also looked at past notebooks completed during
 class to compare Claude output to what material I have been taught. 
 State whether you used a generative or agentic AI tool for this assignment.
 During the second student codeblock 
 
-If you used one, briefly identify the tool and explain its role in your work.
-Describe what you completed independently, what assistance you incorporated,
-and how you reviewed or verified the final result. A concise paragraph is
-sufficient; you do not need to include a transcript of your prompts. For
-example, you might write:
+I also used Claude to understand the ## in the DistilBERT model output. I asked
+the bot to clarify what the symbol meant and then checked its response with the 
+official documentation on HuggingFace that confirmed Claude was accurate. 
 
-> I used [tool] to help with [purpose]. I used its suggestions or output for
-> [part of the assignment] and reviewed or verified that work by [method].
 
-This example is a guide, not a required format; include the details that best
+
+I completed any interpretation and responses to the findings without the assistance of AI. 
+I mainly incorporated AI to help me understand Python code. 
+
+
 describe how you used and checked the tool.
 
 If you did not use one, write: “I did not use a generative or agentic AI tool
