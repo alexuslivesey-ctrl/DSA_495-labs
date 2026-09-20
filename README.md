@@ -121,7 +121,7 @@ is correct or that the score is calibrated.
 
 **Response:**
 
-The model predictions suggest that broader context is not considered by the model. 
+The model's predictions suggest it doesn't consider broader context. 
 In the Emotion test 00468 output, the message states, "i cant help feeling this way" and the model predicted joy. 
 Without context, this message could mean excitement about love but can also reflect sadness, which was the true prediction. 
 Language in emotion_test_00816 also shows a similar trend: "whenever i put myself in others shoes and try to make the person happy. 
@@ -137,8 +137,8 @@ Complete the development-set comparison.
 
 | Candidate-label formulation | Accuracy | Macro-F1 |
 |---|---:|---:|
-| A: emotion names | | |
-| B: expanded descriptions | | |
+| A: emotion names | .500000| 0.464388|
+| B: expanded descriptions | 0.566667| 0.552279|
 
 Which formulation did the prespecified macro-F1 rule select? Give one example
 whose prediction changed when the wording changed. Why is a conclusion based on
@@ -146,7 +146,12 @@ only five development messages per class uncertain?
 
 **Response:**
 
-[Write 3–4 sentences.]
+The prespecified macro-F1 rule selected formulation B: expanded descriptions because it achieved 
+a higher Macro-F1 score (0.566667) than formulation A: emotion names. For emotion_test_00518, label A predicted 
+the emotion as sadness, whereas emotion B predicted the emotion as surprise. Having five development messages 
+can produce uncertain conclusions because it likely does not capture the entire range of emotions that can be
+associated with a message. Language is very diverse and varies over situation type and culture, and more examples
+would be needed to exhaust all the possibilities of correlation between emotion and message. 
 
 ### Q7. Final model comparison
 
@@ -154,16 +159,16 @@ Complete the table using the same 1,970 evaluation messages for both models.
 
 | Method | Accuracy | Macro-F1 | Inference seconds |
 |---|---:|---:|---:|
-| Always predict joy | | | N/A |
-| DistilBERT emotion classifier | | | |
-| BART zero-shot classifier | | | |
+| Always predict joy | 0.350254| 0.086466| N/A |
+| DistilBERT emotion classifier | 0.924365| 0.880256| 6.480784|
+| BART zero-shot classifier | 0.536548| 0.479474| 146.539143|
 
 Describe the main performance difference without claiming that this is a
 controlled comparison of model architectures.
 
 **Response:**
 
-[Write 2–3 sentences.]
+The main performance difference is in accuracy
 
 ### Q8. Four model disagreements
 
