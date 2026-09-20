@@ -85,7 +85,7 @@ I described the train ride, the weather, and every stop along the way.
 Despite the ordinary journey, I am terrified about what happens tomorrow.
 
 The last sentence of the omitted text reflects emotional content relevant to classifying the message emotion as terrified. 
-By not including that content, the message's emotional content could be classified as neutral or indifferent. 
+By not including that content, the message's emotional content could be classified  by the model as either neutral or indifferent. 
 
 ### Q4. Baseline and encoder results
 
