@@ -2,7 +2,7 @@
 [README.md](https://github.com/user-attachments/files/32264240/README.md)
 # Lab 1: Emotion Classification and Error Analysis
 
-**Student:** [Alexus Livesey]
+**Student:** Alexus Livesey
 
 Write concise answers supported by your executed notebook. Tables can contain
 exact results; your prose should interpret them rather than repeat every number.
