@@ -177,10 +177,10 @@ correctness patterns when the notebook makes them available.
 
 | Example ID | Reference | DistilBERT | BART | Who is correct? |
 |---|---|---|---|---|
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
+| emotion_test_00002| sadness| sadness| love| encoder|
+| emotion_test_00072| suprise| fear| suprise| zero shot|
+| emotion_test_00098| anger| fear| sadness| both wrong|
+| emotion_test_00004| sadness| sadness| suprise| encoder|
 
 Choose two of these messages and explain what textual evidence supports each
 model’s prediction. If the reference label is debatable, explain why.
