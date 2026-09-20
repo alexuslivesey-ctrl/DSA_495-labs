@@ -168,7 +168,7 @@ controlled comparison of model architectures.
 
 **Response:**
 
-The main performance difference is in accuracy
+The main performance difference is in accuracy... FINISH
 
 ### Q8. Four model disagreements
 
@@ -187,7 +187,14 @@ model’s prediction. If the reference label is debatable, explain why.
 
 **Response:**
 
-[Write 3–5 sentences.]
+Message ID emotion_test_00072 was predicted by BART as surprise. The message includes text such as 
+"I play billiards left-handed naturally... so trying to play right-handed feels weird." The language 
+contrast between naturally and feels weird supports BART's surprise prediction because it suggests
+a reaction not typically experienced by the individual. Both models incorrectly predicted Emotion_test_00098.
+The message text states "i feel my heart is tortured by what i have done." The correct
+reference label is anger, yet this is debatable because tortured can easily be associated with pain, and
+the use of the word heart experiencing torture may relate more to sadness than anger, such as in instances
+where an individual experiences loss. 
 
 ### Q9. Recommendation and limitations
 
