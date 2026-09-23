@@ -17,7 +17,10 @@ classifier is intended to show.
 
 **Response:**
 
-The classification task is to 
+The classification task is to classify messages by a particular emotion. This task will
+compare emotion classification performance across two different classifiers: DistilBERT
+and BART, which will suggest which classifier will yield the most accurate classification
+results for this particular task. 
 
 ## Files and rerun instructions
 
@@ -216,32 +219,26 @@ produced a 0.536548 accuracy score and 0.479474 Macro-F1 score. Additionally, th
 that some of the errors occurring through the DistilBERT model are not drastic errors. 
 For instance, DistilBERT's error confused, surprise, and fear. While DistilBERT did outperform BART in some
 ways, the limitations are that DistilBERT still produced extreme errors, such as misclassifying sadness as 
-joy. Similarly, FINISH. 
+joy. Similarly, both DistilBERT and BART models are trained on different premises where zero-shot does not
+use previous human examples, whereas DistilBERT does. Therefore, it is possible that the models are not similar
+enough to gauge the truest comparison of performance. 
 
 ## AI-use statement
 
 I used AI, specifically Claude, to help me with this assignment. First, 
-I asked Claude to give me a breakdown of how to use and break down 
-official documentation because I have not used it much before. 
+I asked Claude to give me a breakdown of how to use and understand
+official documentation of Python because I do not have much prior
+experience referencing these sources. 
 
 Next, I used Claude to ensure I was understanding the existing code. For instance, I used Claude
 to clarify what the code in the second student code block was creating.  
 To ensure that the AI was correct, I also looked at past notebooks completed during
-class to compare Claude output to what material I have been taught. 
-State whether you used a generative or agentic AI tool for this assignment.
-During the second student codeblock 
+class to compare Claude output to what material I have been taught. I also reached out to the
+instructor to confirm that the AI-produced code was correct. 
 
-I also used Claude to understand the ## in the DistilBERT model output. I asked
+Lastly, I also used Claude to understand the ## in the DistilBERT model output. I asked
 the bot to clarify what the symbol meant and then checked its response with the 
-official documentation on HuggingFace that confirmed Claude was accurate. 
-
-
+official documentation on Hugging Face that confirmed Claude was accurate. 
 
 I completed any interpretation and responses to the findings without the assistance of AI. 
 I mainly incorporated AI to help me understand Python code. 
-
-
-describe how you used and checked the tool.
-
-If you did not use one, write: “I did not use a generative or agentic AI tool
-for this assignment.”
