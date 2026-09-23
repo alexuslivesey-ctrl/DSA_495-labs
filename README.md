@@ -209,7 +209,14 @@ establish.
 
 **Response:**
 
-[Write 4–6 sentences.]
+This analysis recommends that the DistilBERT classifier be used for the six-emotion task. Comparing 
+model performance, DistilBERT performed better than the BART model on both performance metrics. 
+DistilBERT's accuracy was 0.924365, and its Macro-F1 score was 0.880256, compared to BART's scores, which
+produced a 0.536548 accuracy score and 0.479474 Macro-F1 score. Additionally, this analysis also shows
+that some of the errors occurring through the DistilBERT model are not drastic errors. 
+For instance, DistilBERT's error confused, surprise, and fear. While DistilBERT did outperform BART in some
+ways, the limitations are that DistilBERT still produced extreme errors, such as misclassifying sadness as 
+joy. Similarly, FINISH. 
 
 ## AI-use statement
 
