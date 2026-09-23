@@ -28,7 +28,8 @@ List every file included in your submission and briefly describe it.
 
 - `Lab1.ipynb` (or .py): A Python script to be used in Google Colab for baseline, DistilBERT, and BART zero-shot classification comparisons.
 - `README.md`: This response and reproducibility document.
-- [Add any other submitted files if any, or write “No additional files.”]
+- 'emotion.csv`: This file includes the data used for analysis. It contains the text messages, example ID's, labels, and label IDs.  
+- 
 
 To run the analysis:
 
@@ -37,7 +38,8 @@ To run the analysis:
 3. Confirm that the course data are available in Google Drive at
    `DSA495-2026/Labs/Lab 1`.
 4. Run all notebook cells from top to bottom.
-5. [Add any additional instruction needed to reproduce your submission.]
+5. Fill in the student code blocks 1 and two.
+6. Identify a hypothesis for zero-shot and label wording code block two. 
 
 The notebook contains two designated student code blocks and one model-selection
 line. Complete those sections yourself; the surrounding setup and model-inference
