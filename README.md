@@ -168,7 +168,11 @@ controlled comparison of model architectures.
 
 **Response:**
 
-The main performance difference is in accuracy... FINISH
+The main performance difference occurs across the different methods of DistilBERT, BART, and always predicting joy, 
+and the differences vary by the performance metric analyzed. For instance, accuracy yields around a .57 difference
+between always predicting joy and DistilBERT, and an approximate .40 difference from DistilBERT to BART. The differences
+across methods for Macro-F1 performance are larger than accuracy differences. Macro-F1 range between always predicting joy
+and DistilBERT is approximately a .80 difference. 
 
 ### Q8. Four model disagreements
 
