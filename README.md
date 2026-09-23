@@ -111,7 +111,7 @@ error if the notebook produces one.
 
 | Example ID | Reference label | Prediction | Model score | Brief observation |
 |---|---|---|---:|---|
-| emotion_test_00468| sadness| joy| 0.995780| The model predicted joy when true label was sadness. This is a significant difference.|
+| emotion_test_00468| sadness| joy| 0.995780| The model predicted joy when true label was sadness.|
 | emotion_test_01314| surprise | fear| 0.998750| Fear was predicted, but the correct classification is surprise.|
 | emotion_test_00816| anger| joy| 0.9984| The model predicted joy when the correct classification is anger.|
 
