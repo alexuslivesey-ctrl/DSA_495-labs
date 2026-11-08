@@ -99,14 +99,14 @@ the keywords alone would miss. Topic numbers are identifiers, not rankings.
 
 **Response:**
 
-[The document text supports my labels in a general sense, but not in a specific sense. 
+The document text supports my labels in a general sense, but not in a specific sense. 
 For instance, for topic 5, the document text indicates how to obtain a credit score, whereas
-my label of trustworthiness reflects credit score implications. Similarly for topic 4, which 
+my label of trustworthiness reflects credit score implications. Similarly, for topic 4, which 
 I labeled ownership, the documents discuss what authority the banks/credit unions have, rather
 than individual ownership. A detail in the topic 4 document that the keywords overlook is that
 in all three example documents the text asks a question about whether the credit union/bank can
 perform a specific action/operation. The keywords only pick up on the common name bank but miss
-how the more representative theme would relate to bank authority.]
+how the more representative theme would relate to bank authority.
 
 ### Q3. Outliers and the document map
 
@@ -118,14 +118,14 @@ inspect a document near a visible topic boundary instead.
 
 **Response:**
 
-[10 documents, 3.3% of the data, are assigned to topic -1. Document D0318 discusses 
+10 documents, 3.3% of the data, are assigned to topic -1. Document D0318 discusses 
 how to achieve a good credit score and maintain it over time. Under this view, it could have
 been assigned to topic 4 or 5. However, I believe it remains unassigned/topic -1 because
 it is explaining how to get a good credit score rather than explaining what a
 credit score is or what duties banks can perform. 
 
 The limitation of interpreting situations in two-dimensional document maps is that
-FINSIH.]
+FINSIH.
 
 ## 2. Retrieval and grounded generation
 
