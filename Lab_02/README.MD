@@ -1,6 +1,6 @@
 # Lab 2: Topic Modeling, Semantic Search, and RAG
 
-**Student:** [Your name]
+**Student:** [Alexus Livesey]
 
 Write concise answers **in your own words**, based on your executed notebook.
 Support your explanations with specific document IDs, passages, or model outputs
@@ -76,7 +76,13 @@ miss when you interpret topics?
 
 **Response:**
 
-[Write 3–4 sentences.]
+[300 FAQ documents exist in the data. 194 documents were shortened to create
+`topic text`. Topic modeling using MINILM can only input a maximum length of 256 
+tokens. This means FAQ documents inserted into the MINILM topic model may cut off
+important information. Using open excerpt ensures that all the important information, 
+such as the purpose of the document or key terms, is at the top of the document and 
+thus is not omitted from the analysis. RAG uses more specific details and can search 
+deep in documents to find specific information needed to make evaluations.]
 
 ### Q2. Two topic interpretations
 
@@ -85,15 +91,22 @@ keywords and the modeled excerpt of an actual FAQ from that topic.
 
 | Topic ID | Your topic name | Two supporting keywords | FAQ document ID | Short quotation supporting your interpretation |
 |---|---|---|---|---|
-| | | | | |
-| | | | | |
+|4|Ownership|bank; credit union|D1001|The bank/credit union took the money back, and now my account is overdrawn. |
+|5|Trustworthiness|credit; score|D2069|your credit score... are important for determining whether you’ll be able to get a mortgage, credit card...|
 
 How well do the document texts support your labels? Explain one detail that
 the keywords alone would miss. Topic numbers are identifiers, not rankings.
 
 **Response:**
 
-[Write 3–4 sentences.]
+[The document text supports my labels in a general sense, but not in a specific sense. 
+For instance, for topic 5, the document text indicates how to obtain a credit score, whereas
+my label of trustworthiness reflects credit score implications. Similarly for topic 4, which 
+I labeled ownership, the documents discuss what authority the banks/credit unions have, rather
+than individual ownership. A detail in the topic 4 document that the keywords overlook is that
+in all three example documents the text asks a question about whether the credit union/bank can
+perform a specific action/operation. The keywords only pick up on the common name bank but miss
+how the more representative theme would relate to bank authority.]
 
 ### Q3. Outliers and the document map
 
@@ -105,7 +118,14 @@ inspect a document near a visible topic boundary instead.
 
 **Response:**
 
-[Write 3–4 sentences.]
+[10 documents, 3.3% of the data, are assigned to topic -1. Document D0318 discusses 
+how to achieve a good credit score and maintain it over time. Under this view, it could have
+been assigned to topic 4 or 5. However, I believe it remains unassigned/topic -1 because
+it is explaining how to get a good credit score rather than explaining what a
+credit score is or what duties banks can perform. 
+
+The limitation of interpreting situations in two-dimensional document maps is that
+FINSIH.]
 
 ## 2. Retrieval and grounded generation
 
