@@ -169,7 +169,13 @@ establish the requested personal credit score. Identify any unsupported claim.
 Gemma does acknowledge what it can not specifically answer, which is that
 specific credit score information for that particular date is not provided. 
 The passage states, "A credit score is a prediction of your credit behavior..."
-which does not provide information on the date, but credit scores function. FINISH
+which does not provide information on the date, but credit scores function. 
+Additionally, the k=5 response for the question also does not indicate the 
+date, and so having more information did not help the model in this case. 
+An unsupported claim is identified in the k=3, where a citation is made
+([C0001]), however, this is not a citation passage present in the output. 
+This error is further confirmed by the k=3 citation for the same claim (the 
+first sentence), which cites [C0180].
 
 ## 3. Evaluation and comparison
 
