@@ -2,17 +2,6 @@
 
 **Student:** [Alexus Livesey]
 
-Write concise answers **in your own words**, based on your executed notebook.
-Support your explanations with specific document IDs, passages, or model outputs
-where requested. Your responses should demonstrate your understanding of how
-the evidence supports your conclusions. Follow the course AI policy and complete
-the AI-use statement below.
-
-Tables can contain exact results; your prose should interpret them rather than
-repeat every number.
-Aim for about **350–600 words total**, excluding tables, file descriptions, and
-the AI-use statement. One short paragraph per question is enough.
-
 ## Purpose
 
 In 2–3 sentences, describe how this lab uses the [CFPB FAQ collection](https://www.consumerfinance.gov/ask-cfpb/) to discover
@@ -22,7 +11,11 @@ Your response should demonstrate your understanding of the purpose of this lab.
 
 **Response:**
 
-[Write here.]
+This analysis uses the CFPB FAQ collection to discover topics through a topic model that 
+uses the BERTtopic framework and a MiniLM transformer. The comparison between three and 
+five retrieved passages is to examine whether the model has enough information to answer the 
+question, or whether too much information causes the model to overlook the question being 
+asked. 
 
 ## Files and rerun instructions
 
@@ -92,7 +85,7 @@ keywords and the modeled excerpt of an actual FAQ from that topic.
 | Topic ID | Your topic name | Two supporting keywords | FAQ document ID | Short quotation supporting your interpretation |
 |---|---|---|---|---|
 |4|Ownership|bank; credit union|D1001|The bank/credit union took the money back, and now my account is overdrawn. |
-|5|Trustworthiness|credit; score|D2069|your credit score... are important for determining whether you’ll be able to get a mortgage, credit card...|
+|5|Trustworthiness|credit; score | D2069 | Your credit score... are important for determining whether you’ll be able to get a mortgage, credit card...|
 
 How well do the document texts support your labels? Explain one detail that
 the keywords alone would miss. Topic numbers are identifiers, not rankings.
@@ -140,7 +133,14 @@ guarantee that the passage is sufficient?
 
 **Response:**
 
-[Write 3–4 sentences.]
+The chunk size is 250 tokens. The overlap settings are set to 40, and the resulting
+number of chunks is 767. For chunk ID C0180, the question was what factors impact my
+credit score. The model did provide an answer to the question by listing different 
+influences, such as " Your bill-paying history Your current unpaid debt The number and 
+type of loan accounts you have How long you have had your loan accounts open..." 
+Similarity scores are not good measures of whether the question can be answered 
+because they only examine semantic togetherness instead of specific knowledge. 
+
 
 ### Q5. Check an answer and its citation
 
@@ -151,7 +151,12 @@ of a citation insufficient to establish that the answer is supported?
 
 **Response:**
 
-[Write 3–4 sentences.]
+I chose the factual claim that different scoring models can vary depending on
+the type of the loan product, which is chunk ID: C0176. The passage does not 
+support the claim because it only mentions a dispute regarding data given to
+reporting companies. A citation is not sufficient to establish that the answer is 
+supported because the citation only indicates that the token is present in the model
+but does not ensure factual validity. 
 
 ### Q6. Recognizing missing information
 
@@ -161,7 +166,10 @@ establish the requested personal credit score. Identify any unsupported claim.
 
 **Response:**
 
-[Write 2–3 sentences.]
+Gemma does acknowledge what it can not specifically answer, which is that
+specific credit score information for that particular date is not provided. 
+The passage states, "A credit score is a prediction of your credit behavior..."
+which does not provide information on the date, but credit scores function. FINISH
 
 ## 3. Evaluation and comparison
 
@@ -175,25 +183,33 @@ State what stayed fixed and identify **one limitation** of this two-question com
 
 **Response:**
 
-[Write 4–5 sentences.]
+K controls how many chunks the model takes. A discrepancy between k=3 and k=5 
+is that they use different citations to cite the second claim in the passages. 
+They both say " vary depending on the type of loan product," but k=3 cites 
+[C0176] whereas k=5 [C0179].
+
+I would choose a higher k value, in this case k=5, because it can grasp more 
+evidence than k=3 can. An example to support this is the side-by-side comparison
+for E2. The RAG model that used k=3 did not specify the detailed factors that affect
+credit score ranges. Whereas in the k=5 model, it claimed that "factors impacting 
+credit scores, such as payment history and debt levels." What is more, k=5 also
+provides a list of examples of methods to obtain credit scores, but k-3 does not. 
+
+A limitation of this two-question comparison is that it is not tested on more 
+documents in the corpus with potentially different information and context. It 
+may also be useful to try different types of questions. 
 
 ## AI-use statement
 
-State whether you used a generative or agentic AI assistant for this assignment.
-Running Gemma as required by the lab is part of the analysis; using an assistant
-to produce or revise your submitted work is a separate form of assistance.
+I used AI for this assignment, but very minimally. Below are the two ways I used AI
+for this analysis: 
 
-If you used an assistant, briefly identify the tool and explain its role.
-Describe what you completed independently, what assistance you incorporated,
-and how you reviewed or verified the final result. A concise paragraph is
-sufficient; you do not need to include a transcript of your prompts. For
-example, you might write:
+> I used Gemini inside Google Colab to help me identify chunk size. It told me 
+that the chunk size was in the settings cell and that it was 250 tokens. I then 
+went to the settings cell to confirm this was correct. 
 
-> I used [tool] to help with [purpose]. I used its suggestions or output for
-> [part of the assignment] and reviewed or verified that work by [method].
+> I used Claude to help me clarify the definition and flow between corpus and chunks. 
+I checked this by looking it up through Google. Since it is a pretty standard definition, 
+I found no variations in meaning. 
 
-This example is a guide, not a required format; include the details that best
-describe how you used and checked the tool.
 
-If you did not use an assistant, write: “I did not use a generative or agentic AI
-assistant for this assignment.”
