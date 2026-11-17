@@ -69,13 +69,13 @@ miss when you interpret topics?
 
 **Response:**
 
-[300 FAQ documents exist in the data. 194 documents were shortened to create
+300 FAQ documents exist in the data. 194 documents were shortened to create
 `topic text`. Topic modeling using MINILM can only input a maximum length of 256 
 tokens. This means FAQ documents inserted into the MINILM topic model may cut off
 important information. Using open excerpt ensures that all the important information, 
 such as the purpose of the document or key terms, is at the top of the document and 
 thus is not omitted from the analysis. RAG uses more specific details and can search 
-deep in documents to find specific information needed to make evaluations.]
+deep in documents to find specific information needed to make evaluations.
 
 ### Q2. Two topic interpretations
 
