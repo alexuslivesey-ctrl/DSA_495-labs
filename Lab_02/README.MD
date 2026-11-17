@@ -52,7 +52,7 @@ To run the analysis:
 6. Run the supplied analysis code and review all four generated answers
    alongside their retrieved passages. Run the comparison and export cells,
    answer the seven questions below, and keep notebook outputs visible.
-7. [Add any additional instruction needed to reproduce your submission.]
+
 
 All analysis code is supplied. Your work is to run it, check the results,
 and explain what the evidence shows. Do not include `Lab2_Instructor.ipynb`,
