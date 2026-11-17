@@ -21,15 +21,15 @@ asked.
 
 List every file included in your submission and briefly describe it.
 
-- `Lab2.ipynb` (or .py): [Complete this description.]
+- `Lab2.ipynb` (or .py): google colab code of RAG and topic analysis. 
 - `README.md`: this response and reproducibility document.
 - `data/cfpb_documents.csv`: the prepared FAQ collection for topic modeling.
 - `data/knowledgebase/*.txt`: one text file per FAQ for retrieval.
 - `data/README.md`: data sources, preparation, and collection limitations.
 - `data/manifest.json`: source metadata and corpus checksums.
-- `outputs/topic_summary.csv` and `outputs/document_topics.csv`: [Complete.]
-- `outputs/topic_words.html` and `outputs/document_map.html`: [Complete.]
-- `outputs/answer_runs.csv` and `outputs/retrieved_passages.csv`: [Complete.]
+- `outputs/topic_summary.csv` and `outputs/document_topics.csv`: topic outputs and labels
+- `outputs/topic_words.html` and `outputs/document_map.html`: UMAP of topic labels and the words for labels. 
+- `outputs/answer_runs.csv` and `outputs/retrieved_passages.csv`: logs generated from RAG code. 
 - `outputs/comparison.csv`: the two answers and retrieved chunk IDs side by side for each question.
 
 The two evaluation questions (E1 and E2) are supplied directly in the notebook.
